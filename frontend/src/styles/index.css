@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-50 text-ink-900 dark:bg-slate-950 dark:text-white;
+  font-family: Poppins, ui-sans-serif, system-ui;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/10 backdrop-blur-xl border border-white/30 dark:border-white/10;
+}
+
+.gradient-hero {
+  background: radial-gradient(circle at top, rgba(52, 211, 153, 0.25), transparent 55%),
+    radial-gradient(circle at 10% 20%, rgba(248, 113, 113, 0.25), transparent 40%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.08));
+}
+
+.fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
