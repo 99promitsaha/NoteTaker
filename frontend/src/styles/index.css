@@ -39,3 +39,18 @@ body {
     transform: translateY(0);
   }
 }
+
+.modal-pop {
+  animation: modal-pop 0.25s ease-out both;
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
